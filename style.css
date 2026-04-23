@@ -1,0 +1,389 @@
+:root {
+    --bg-gradient: linear-gradient(to bottom, #f5f7fa, #e4ecf7);
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --card-border: rgba(255, 255, 255, 0.5);
+    --text-primary: #1d1d1f;
+    --text-secondary: #86868b;
+    --accent-blue: #007aff;
+    --accent-blue-hover: #0066d6;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-primary);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+/* Main Container Card */
+main {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--card-border);
+}
+
+.input-section {
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+select, input {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    background-color: var(--input-bg, rgba(255, 255, 255, 0.8));
+    border: 1px solid var(--input-border, rgba(0, 0, 0, 0.1));
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.15);
+    background-color: var(--input-focus-bg, #ffffff);
+}
+
+select::placeholder, input::placeholder {
+    color: var(--text-secondary);
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    border-radius: 9999px; /* Pill style */
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.25);
+}
+
+button:hover {
+    background-color: var(--accent-blue-hover);
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 122, 255, 0.35);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.hidden {
+    display: none;
+}
+
+.results-section {
+    animation: fadeIn 0.4s ease-out;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.results-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    color: var(--text-primary);
+}
+
+.hint-text {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.role-card {
+    background: var(--role-card-bg, rgba(255, 255, 255, 0.95));
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--role-card-border, rgba(0,0,0,0.04));
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.role-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    background: var(--role-card-hover-bg, #ffffff);
+}
+
+.role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.role-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.match-percentage {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    background-color: var(--badge-bg, rgba(0,0,0,0.03));
+    color: var(--text-secondary);
+    border: 1px solid var(--badge-border, rgba(0,0,0,0.05));
+}
+
+/* Best Match Highlighting */
+.match-high {
+    background-color: var(--match-high-bg, rgba(0, 122, 255, 0.08));
+    color: var(--accent-blue);
+    border: 1px solid var(--match-high-border, rgba(0, 122, 255, 0.2));
+}
+
+/* We soften other match types */
+.match-medium {
+    background-color: var(--badge-bg, rgba(0,0,0,0.03));
+    color: var(--text-secondary);
+}
+
+.match-low {
+    background-color: var(--badge-bg, rgba(0,0,0,0.02));
+    color: var(--text-muted, #a1a1a6);
+}
+
+.skills-info {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.skills-info strong {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 0.85rem;
+}
+
+.missing-skills {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.skill-tag {
+    background-color: var(--badge-bg, rgba(0,0,0,0.04));
+    color: var(--text-secondary);
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    border: 1px solid var(--badge-border, rgba(0,0,0,0.02));
+}
+
+/* Progress Bar & Stats */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background-color: var(--badge-bg, rgba(0,0,0,0.05));
+    border-radius: 4px;
+    margin: 0.8rem 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 4px;
+    background-color: var(--accent-blue);
+    transition: width 0.5s ease-out;
+}
+
+.role-stats {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+/* Action Buttons */
+.role-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.role-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    border: 1px solid var(--badge-border, rgba(0,0,0,0.05));
+    background: var(--input-bg, rgba(255,255,255,0.8));
+    color: var(--text-primary);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.role-btn:hover {
+    background: var(--input-focus-bg, #ffffff);
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+/* Theme Switcher */
+.theme-switcher {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--card-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 99px;
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-soft);
+    z-index: 100;
+}
+
+.theme-switcher label {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.theme-switcher select {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    border: 1px solid var(--input-border, rgba(0,0,0,0.1));
+    background: var(--input-bg, rgba(255,255,255,0.5));
+    width: auto;
+}
+
+/* Themes */
+body.theme-dark {
+    --bg-gradient: linear-gradient(to bottom, #0f172a, #020617);
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-blue: #3b82f6;
+    --accent-blue-hover: #60a5fa;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.5);
+    
+    --input-bg: rgba(15, 23, 42, 0.6);
+    --input-focus-bg: rgba(15, 23, 42, 0.9);
+    --input-border: rgba(255, 255, 255, 0.1);
+    
+    --role-card-bg: rgba(30, 41, 59, 0.8);
+    --role-card-hover-bg: rgba(30, 41, 59, 1);
+    --role-card-border: rgba(255, 255, 255, 0.05);
+    
+    --badge-bg: rgba(255, 255, 255, 0.05);
+    --badge-border: rgba(255, 255, 255, 0.1);
+    --match-high-bg: rgba(59, 130, 246, 0.15);
+    --match-high-border: rgba(59, 130, 246, 0.3);
+}
+
+body.theme-midnight {
+    --bg-gradient: linear-gradient(to bottom, #020617, #0f172a);
+    --card-bg: rgba(15, 23, 42, 0.7);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-blue: #3b82f6;
+    --accent-blue-hover: #60a5fa;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.6);
+    
+    --input-bg: rgba(2, 6, 23, 0.6);
+    --input-focus-bg: rgba(2, 6, 23, 0.9);
+    --input-border: rgba(255, 255, 255, 0.1);
+    
+    --role-card-bg: rgba(15, 23, 42, 0.8);
+    --role-card-hover-bg: rgba(15, 23, 42, 1);
+    --role-card-border: rgba(255, 255, 255, 0.05);
+    
+    --badge-bg: rgba(255, 255, 255, 0.05);
+    --badge-border: rgba(255, 255, 255, 0.1);
+    --match-high-bg: rgba(59, 130, 246, 0.15);
+    --match-high-border: rgba(59, 130, 246, 0.3);
+}
+
+body.theme-soft-blue {
+    --bg-gradient: linear-gradient(to bottom, #e0f2fe, #f8fafc);
+}
+
+body.theme-minimal-gray {
+    --bg-gradient: #e5e7eb;
+}
