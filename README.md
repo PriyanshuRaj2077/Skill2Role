@@ -1,4 +1,5 @@
 # Skill2Role
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 🌐 **Live Demo:** https://priyanshuraj2077.github.io/Skill2Role/
 
