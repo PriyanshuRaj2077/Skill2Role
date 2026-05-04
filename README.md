@@ -1,7 +1,5 @@
-# Skill2Role – Election Awareness Explorer
+# Skill2Role
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
-Skill2Role is adapted to support election literacy by mapping user interests to civic roles and evaluating their understanding of the election process.
 
 🌐 **Live Demo:** https://priyanshuraj2077.github.io/Skill2Role/
 
