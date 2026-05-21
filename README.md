@@ -9,7 +9,7 @@ Map your interests and skills to the right roles.
 
 ## 🚀 Overview
 
-Skill2Role is a modern web application that helps users discover career roles based on their interests and skills. It uses a logic-driven matching system to rank roles and highlight skill gaps, while also allowing real-world exploration through searches and learning resources.
+Skill2Role is a modern web application that helps users discover career roles based on their interests and skills. It uses a logic-driven matching system to rank roles and highlight skill gaps, while also allowing real-world exploration through search and learning resources.
 
 ---
 
@@ -68,8 +68,4 @@ match % = (matched skills / total required skills) × 100
 * 📊 Better analytics and filtering
 * 🎯 Role difficulty classification
 
----
 
-## 👨‍💻 Author
-
-Priyanshu Raj
