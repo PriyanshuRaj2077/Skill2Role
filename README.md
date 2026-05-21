@@ -3,7 +3,7 @@
 
 🌐 **Live Demo:** https://priyanshuraj2077.github.io/Skill2Role/
 
-Map your interests and skills to the right roles.
+Map your interests and skills to the right role.
 
 ---
 
