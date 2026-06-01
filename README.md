@@ -15,8 +15,8 @@ Skill2Role is a modern web application that helps users discover career roles ba
 
 ## ✨ Features
 
-* 🎯 Multi-interest selection
 * 📊 Skill-based role matching with percentage scoring
+* 🎯 Multi-interest selection
 * 📉 Skill gap analysis (missing skills + progress)
 * 🔍 Direct Google search integration
 * 🎥 “Watch” option for learning
